@@ -46,6 +46,7 @@ position: auto !important;
     color: #353535 !important;
     box-shadow: 0 0 transparent !important;
 }
+
 .banner{
     background:url(img/banner.jpg);
     background-repeat: no-repeat;
@@ -2172,3 +2173,45 @@ input,
     }
 }
 
+
+
+.wp-ab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 30px;
+    right: 10px;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    font-size: 42px;
+    z-index: 999;
+background: #24CC63 !important;
+   
+    color: #fff;
+    box-shadow: 0 0 15px #00000020;
+    animation: idle 1.3s ease infinite;
+}
+.wp-ab a{
+    position: relative;
+    left:3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+@keyframes idle {
+    0% {
+        bottom: 30px;
+    }
+
+    50% {
+        bottom: 25px;
+    }
+
+    100% {
+        bottom: 30px;
+    }
+}
