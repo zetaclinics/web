@@ -29,6 +29,9 @@ button{
     position: relative;
     top: 5px;
 }
+section{
+    padding: 10px !important;
+}
 nav{
     position: sticky;
     top: 0;
