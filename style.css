@@ -38,6 +38,14 @@ nav{
     box-shadow: 0 0 15px #00000050;
   
 }
+.propose nav{
+position: auto !important;
+    top: 0;
+    z-index: 999;
+    background: none !important;
+    color: #353535 !important;
+    box-shadow: 0 0 transparent !important;
+}
 .banner{
     background:url(img/banner.jpg);
     background-repeat: no-repeat;
