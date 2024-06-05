@@ -2,252 +2,741 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>zetaclinics.com</title>
-    <style>
-        * {
-  border: 0;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-:root {
-  font-size: calc(16px + (24 - 16)*(100vw - 320px)/ (1280 - 320));
-}
-
-body, .preloader {
-  display: flex;
-}
-
-body {
-  background: #000;
-  color: #3df1f1;
-  font: 1em Dosis, sans-serif;
-  height: 100vh;
-  line-height: 1.5;
-  perspective: 40em;
-}
-
-.preloader {
-  animation: tiltSpin 8s linear infinite;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-  width: 17em;
-  height: 17em;
-}
-.preloader, .preloader__ring {
-  transform-style: preserve-3d;
-}
-.preloader__ring {
-  animation-name: spin;
-  animation-duration: 4s;
-  animation-timing-function: inherit;
-  animation-iteration-count: inherit;
-  font-size: 2em;
-  position: relative;
-  height: 3rem;
-  width: 1.5rem;
-}
-.preloader__ring:nth-child(even) {
-  animation-direction: reverse;
-}
-.preloader__sector {
-  font-weight: 600;
-  position: absolute;
-  top: 0;
-  left: 0;
-  text-align: center;
-  text-transform: uppercase;
-  transform: translateZ(7rem);
-}
-.preloader__sector, .preloader__sector:empty:before {
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-}
-.preloader__sector:empty:before {
-  background: linear-gradient(transparent 45%, currentColor 45% 55%, transparent 55%);
-  content: "";
-}
-.preloader__sector:nth-child(2) {
-  transform: rotateY(12deg) translateZ(7rem);
-}
-.preloader__sector:nth-child(3) {
-  transform: rotateY(24deg) translateZ(7rem);
-}
-.preloader__sector:nth-child(4) {
-  transform: rotateY(36deg) translateZ(7rem);
-}
-.preloader__sector:nth-child(5) {
-  transform: rotateY(48deg) translateZ(7rem);
-}
-.preloader__sector:nth-child(6) {
-  transform: rotateY(60deg) translateZ(7rem);
-}
-.preloader__sector:nth-child(7) {
-  transform: rotateY(72deg) translateZ(7rem);
-}
-.preloader__sector:nth-child(8) {
-  transform: rotateY(84deg) translateZ(7rem);
-}
-.preloader__sector:nth-child(9) {
-  transform: rotateY(96deg) translateZ(7rem);
-}
-.preloader__sector:nth-child(10) {
-  transform: rotateY(108deg) translateZ(7rem);
-}
-.preloader__sector:nth-child(11) {
-  transform: rotateY(120deg) translateZ(7rem);
-}
-.preloader__sector:nth-child(12) {
-  transform: rotateY(132deg) translateZ(7rem);
-}
-.preloader__sector:nth-child(13) {
-  transform: rotateY(144deg) translateZ(7rem);
-}
-.preloader__sector:nth-child(14) {
-  transform: rotateY(156deg) translateZ(7rem);
-}
-.preloader__sector:nth-child(15) {
-  transform: rotateY(168deg) translateZ(7rem);
-}
-.preloader__sector:nth-child(16) {
-  transform: rotateY(180deg) translateZ(7rem);
-}
-.preloader__sector:nth-child(17) {
-  transform: rotateY(192deg) translateZ(7rem);
-}
-.preloader__sector:nth-child(18) {
-  transform: rotateY(204deg) translateZ(7rem);
-}
-.preloader__sector:nth-child(19) {
-  transform: rotateY(216deg) translateZ(7rem);
-}
-.preloader__sector:nth-child(20) {
-  transform: rotateY(228deg) translateZ(7rem);
-}
-.preloader__sector:nth-child(21) {
-  transform: rotateY(240deg) translateZ(7rem);
-}
-.preloader__sector:nth-child(22) {
-  transform: rotateY(252deg) translateZ(7rem);
-}
-.preloader__sector:nth-child(23) {
-  transform: rotateY(264deg) translateZ(7rem);
-}
-.preloader__sector:nth-child(24) {
-  transform: rotateY(276deg) translateZ(7rem);
-}
-.preloader__sector:nth-child(25) {
-  transform: rotateY(288deg) translateZ(7rem);
-}
-.preloader__sector:nth-child(26) {
-  transform: rotateY(300deg) translateZ(7rem);
-}
-.preloader__sector:nth-child(27) {
-  transform: rotateY(312deg) translateZ(7rem);
-}
-.preloader__sector:nth-child(28) {
-  transform: rotateY(324deg) translateZ(7rem);
-}
-.preloader__sector:nth-child(29) {
-  transform: rotateY(336deg) translateZ(7rem);
-}
-.preloader__sector:nth-child(30) {
-  transform: rotateY(348deg) translateZ(7rem);
-}
-
-/* Animations */
-@keyframes tiltSpin {
-  from {
-    transform: rotateY(0) rotateX(30deg);
-  }
-  to {
-    transform: rotateY(1turn) rotateX(30deg);
-  }
-}
-@keyframes spin {
-  from {
-    transform: rotateY(0);
-  }
-  to {
-    transform: rotateY(1turn);
-  }
-}
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e2bce648c2.js" crossorigin="hurphygames"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<link href="https://fonts.googleapis.com/css2?family=Arimo&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+<title>ZetaClinics</title>
 </head>
-<body>
+<body id="about">
+    <body>
+        <div class="nav-top">
+            <div class="nav-title">
+                <div class="logo-title"><img src="img/qt=q_95.jpg" alt="logo"></div>
+            </div>
+            <div class="nav-support">
+                <div class="sp-title">Hızlı Acil Yardım</div>
+                <div class="sp-alt">
+                    <span style="color: #49aecf; font-weight: 600; font-size: 18px;">0 856 (565) 65 56</span>
+                </div>
+            </div>
+            <div class="nav-support flex-top-nbav">
+                <div class="loc-dot">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div class="today-a">
+                    <div class="sp-title">Adres bilgileri örnek yeri</div>
+                    <div class="sp-alt">
+                        
+                        Türkiye 8007 Antalya
+                    </div>
+                </div>
+            </div>
+            <div class="nav-support flex-top-nbav">
+                <div class="loc-dot">
+                    <i class="fa-regular fa-clock"></i>
+                </div>
+                <div class="today-a">
+                    <div class="sp-title">Pazartesi - Cumartesi - 8:00 - 18:00</div>
+                    <div class="sp-alt">
+                        
+                        Pazar - 8:00 - 14:00
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <div class="nav-container">
+                
+        <div class="nav-title display-middle-none">
+            <div class="logo-title"><img src="img/qt=q_95.jpg" alt="logo"></div>
+        </div>
+                <div class="nav-link-container">
+                    <div class="nav-links nav-link-settings">
+                        <div class="nav-menu-header">
+                            <div class="profile-img">
+                                <img src="img/qt=q_95.jpg" alt="logo">
+                            </div>
+        
+                        </div>
+                        <div id="nth" class="nav-links-effect-container">
+        
+                            <a href="index.html" class="nav-link active">
+                                <div class="link-anim-set">
+                                    <div class="link-anim-set-p p1">
+                                        <div class="link-numbers">01</div>Ana Sayfa
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="gallery.html" class="nav-link">
+                                <div class="link-anim-set">
+                                    <div class="link-anim-set-p p2">
+                                        <div class="link-numbers">02</div>Galeri
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="nav-link dropdowns z2">
+                                <div>
+                                    <div class="link-anim-set-p p3 alignr">
+                                        <div class="link-numbers">03</div>Hizmetlerimiz <i class="fa-solid fa-caret-down"></i>
+                                    </div>
+                                    <div class="dropdown-m">
+                                        <a href="#">Hizmetadı</a>
+                                        <a href="#">Hizmetadı</a>
+                                        <a href="#">Hizmetadı</a>
+                                        <a href="#">Hizmetadı</a>
+                                        <a href="#">Hizmetadı</a>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="choices.html" class="nav-link">
+                                <div class="link-anim-set">
+                                    <div class="link-anim-set-p p4">
+                                        <div class="link-numbers">04</div>Hakkımızda
+                                    </div>
+                                </div>
+                            </a>
+                           
+                            <a href="about.html" class="nav-link">
+                                <div class="link-anim-set">
+                                    <div class="link-anim-set-p p6">
+                                        <div class="link-numbers">06</div>İletişim
+                                    </div>
+                                </div>
+                            </a>
+                            
+        
+        
+        
+        
+                        </div>
+        
+                       
+        
+                    </div>
+                    <button class="menu-btn"><i class="fa-solid fa-bars-staggered"></i></button>
+                </div>
+            </div>
+        </nav>
+
+
+        <div>
+            
+                <div class="banner">
+                    <div class="container banner-settings">
+                        <div class="banner-text-container">
+                            <div class="banner-text">
+                                ZetaClinics aracılığı ile<br>
+                                En iyisini seçin kendinize<br>
+                                değer verin
+                            </div>
+                            <div class="banner-alt-text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, doloribus.
+                            </div>
+                            <div class="banner-button">
+                                <a href="#">Randevu Al <i class="fa-solid fa-circle-chevron-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+        </div>
+
+        <div class="text-gray-600 body-font bg-blue-50">
+            <div class="container mx-auto flex flex-wrap">
+                <div class="flex flex-wrap -m-4">
+                    <div class="p-4 lg:w-1/2 md:w-full ">
+                        <div class="flex rounded-lg border-gray-200 border-opacity-50 py-8 sm:flex-row flex-col">
+                            <div
+                                class="flex w-16 h-16 sm:mr-8 sm:mb-0 mb-4 inline-flex items-center justify-center rounded-full  text-blue-500 flex-shrink-0">
+                                <i style="font-size: 32px;" class="fa-solid fa-ribbon"></i>
+                            </div>
+                            <div class="flex-grow">
+                                <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Estetik Cerrahı
+                                </h2>
+                                <p class="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast
+                                vegan taxidermy. Gastropub indxgo juice poutine.</p>
+                                <a class="mt-3 text-blue-500 inline-flex items-center">Daha fazlasını incele
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4 lg:w-1/2 md:w-full ">
+                        <div class="flex  rounded-lg border-gray-200 border-opacity-50 py-8 sm:flex-row flex-col">
+                            <div
+                                class="w-16 h-16 sm:mr-8 sm:mb-0 mb-4 inline-flex items-center justify-center rounded-full  text-blue-500 flex-shrink-0">
+                                <i style="font-size: 32px;" class="fa-solid fa-stethoscope"></i>
+                            </div>
+                            <div class="flex-grow">
+                                <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Estetik Cerrahları</h2>
+                                <p class="leading-relaxed text-base ">Blue bottle crucifix vinyl post-ironic four dollar toast
+                                    vegan taxidermy. Gastropub indxgo juice poutine.</p>
+                                <a class="mt-3 text-blue-500 inline-flex items-center">Daha fazlasını incele
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- header herolar -->
+        <section class="container text-gray-600 body-font">
+            <div class="container mx-auto flex  py-24 md:flex-row flex-col items-center">
+                <div
+                    class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+                    <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Before they sold out
+                        <br class="hidden lg:inline-block">readymade gluten
+                    </h1>
+                    <p class="mb-8 leading-relaxed">Copper mug try-hard pitchfork pour-over freegan heirloom neutra air plant
+                        cold-pressed tacos poke beard tote bag. Heirloom echo park mlkshk tote bag selvage hot chicken authentic
+                        tumeric truffaut hexagon try-hard chambray.</p>
+                    <div class="flex justify-center">
+                        <button
+                            class="inline-flex text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded text-lg">Button</button>
+                        <button
+                            class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Button</button>
+                    </div>
+                </div>
+                <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+                    <img class="object-cover object-center rounded" alt="hero" src="https://dummyimage.com/720x600">
+                </div>
+            </div>
+        </section>
+       
+        <section class="container text-gray-600 body-font">
+            <div class="container mx-auto flex  py-24 md:flex-row flex-col items-center">
+                <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+                    <img class="object-cover object-center rounded" alt="hero" src="https://dummyimage.com/720x600">
+                </div>
+                <div
+                    class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+                    <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Before they sold out
+                        <br class="hidden lg:inline-block">readymade gluten
+                    </h1>
+                    <p class="mb-8 leading-relaxed">Copper mug try-hard pitchfork pour-over freegan heirloom neutra air plant
+                        cold-pressed tacos poke beard tote bag. Heirloom echo park mlkshk tote bag selvage hot chicken authentic
+                        tumeric truffaut hexagon try-hard chambray.</p>
+                    <div class="flex justify-center">
+                        <button
+                            class="inline-flex text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded text-lg">Button</button>
+                        <button
+                            class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Button</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- header hero end -->
+        
+
+
+        <!-- section 3 -->
+
+        <section class="container text-gray-600 body-font">
+            <div class="container  py-24 mx-auto">
+                <div class="text-center mb-20">
+                    <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">Raw Denim Heirloom Man Braid</h1>
+                    <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">Blue bottle crucifix vinyl
+                        post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine, ramps microdosing banh mi
+                        pug.</p>
+                    <div class="flex mt-6 justify-center">
+                        <div class="w-16 h-1 rounded-full bg-blue-500 inline-flex"></div>
+                    </div>
+                </div>
+                <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
+                    <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
+                        <div
+                            class="w-20 h-20 inline-flex items-center justify-center rounded-full bg-blue-100 text-blue-500 mb-5 flex-shrink-0">
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" class="w-10 h-10" viewBox="0 0 24 24">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                            </svg>
+                        </div>
+                        <div class="flex-grow">
+                            <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Shooting Stars</h2>
+                            <p class="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan
+                                taxidermy. Gastropub indxgo juice poutine, ramps microdosing banh mi pug VHS try-hard.</p>
+                            
+                        </div>
+                    </div>
+                    <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
+                        <div
+                            class="w-20 h-20 inline-flex items-center justify-center rounded-full bg-blue-100 text-blue-500 mb-5 flex-shrink-0">
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" class="w-10 h-10" viewBox="0 0 24 24">
+                                <circle cx="6" cy="6" r="3"></circle>
+                                <circle cx="6" cy="18" r="3"></circle>
+                                <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
+                            </svg>
+                        </div>
+                        <div class="flex-grow">
+                            <h2 class="text-gray-900 text-lg title-font font-medium mb-3">The Catalyzer</h2>
+                            <p class="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan
+                                taxidermy. Gastropub indxgo juice poutine, ramps microdosing banh mi pug VHS try-hard.</p>
+                            
+                        </div>
+                    </div>
+                    <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
+                        <div
+                            class="w-20 h-20 inline-flex items-center justify-center rounded-full bg-blue-100 text-blue-500 mb-5 flex-shrink-0">
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" class="w-10 h-10" viewBox="0 0 24 24">
+                                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </div>
+                        <div class="flex-grow">
+                            <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Neptune</h2>
+                            <p class="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan
+                                taxidermy. Gastropub indxgo juice poutine, ramps microdosing banh mi pug VHS try-hard.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- section 3 end -->
+
+
+
+        <!-- section 4 -->
+        <section class="container text-gray-600 body-font">
+            <div class="container py-24 mx-auto">
+                <div class="flex flex-col">
+                    <div class="h-1 bg-gray-200 rounded overflow-hidden">
+                        <div class="w-24 h-full bg-blue-500"></div>
+                    </div>
+                    <div class="flex flex-wrap sm:flex-row flex-col py-6 mb-12">
+                        <h1 class="sm:w-2/5 text-gray-900 font-medium title-font text-2xl mb-2 sm:mb-0">Space The Final Frontier
+                        </h1>
+                        <p class="sm:w-3/5 leading-relaxed text-base sm:pl-10 pl-0">Street art subway tile salvia four dollar
+                            toast bitters selfies quinoa yuccie synth meditation iPhone intelligentsia prism tofu. Viral
+                            gochujang bitters dreamcatcher.</p>
+                    </div>
+                </div>
+                <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
+                    <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+                        <div class="rounded-lg h-64 overflow-hidden">
+                            <img alt="content" class="object-cover object-center h-full w-full"
+                                src="https://dummyimage.com/1203x503">
+                        </div>
+                        <h2 class="text-xl font-medium title-font text-gray-900 mt-5">Shooting Stars</h2>
+                        <p class="text-base leading-relaxed mt-2">Swag shoivdigoitch literally meditation subway tile tumblr
+                            cold-pressed. Gastropub street art beard dreamcatcher neutra, ethical XOXO lumbersexual.</p>
+                        <a class="text-blue-500 inline-flex items-center mt-3">Learn More
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                                <path d="M5 12h14M12 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+                        <div class="rounded-lg h-64 overflow-hidden">
+                            <img alt="content" class="object-cover object-center h-full w-full"
+                                src="https://dummyimage.com/1204x504">
+                        </div>
+                        <h2 class="text-xl font-medium title-font text-gray-900 mt-5">The Catalyzer</h2>
+                        <p class="text-base leading-relaxed mt-2">Swag shoivdigoitch literally meditation subway tile tumblr
+                            cold-pressed. Gastropub street art beard dreamcatcher neutra, ethical XOXO lumbersexual.</p>
+                        <a class="text-blue-500 inline-flex items-center mt-3">Learn More
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                                <path d="M5 12h14M12 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+                        <div class="rounded-lg h-64 overflow-hidden">
+                            <img alt="content" class="object-cover object-center h-full w-full"
+                                src="https://dummyimage.com/1205x505">
+                        </div>
+                        <h2 class="text-xl font-medium title-font text-gray-900 mt-5">The 400 Blows</h2>
+                        <p class="text-base leading-relaxed mt-2">Swag shoivdigoitch literally meditation subway tile tumblr
+                            cold-pressed. Gastropub street art beard dreamcatcher neutra, ethical XOXO lumbersexual.</p>
+                        <a class="text-blue-500 inline-flex items-center mt-3">Learn More
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                                <path d="M5 12h14M12 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- section 4 end -->
+
+
+        <!-- section 5 -->
+        <section class="container text-gray-600 body-font">
+            <div class="text-center  py-24">
+                <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">Raw Denim Heirloom Man Braid</h1>
+                <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">Blue bottle crucifix vinyl
+                    post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine, ramps microdosing banh mi
+                    pug.</p>
+                <div class="flex mt-6 justify-center">
+                    <div class="w-16 h-1 rounded-full bg-blue-500 inline-flex"></div>
+                </div>
+            </div>
+            <div class="container mx-auto flex   md:flex-row flex-col items-center">
+                <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+                    <img class="object-cover object-center rounded" alt="hero" src="https://dummyimage.com/720x600">
+                </div>
+                <div
+                    class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+                    <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Before they sold out
+                        <br class="hidden lg:inline-block">readymade gluten
+                    </h1>
+                    <p class="mb-8 leading-relaxed">Copper mug try-hard pitchfork pour-over freegan heirloom neutra air plant
+                        cold-pressed tacos poke beard tote bag. Heirloom echo park mlkshk tote bag selvage hot chicken authentic
+                        tumeric truffaut hexagon try-hard chambray.</p>
+                    <div class="flex justify-center">
+                        <button
+                            class="inline-flex text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded text-lg">Button</button>
+                        <button
+                            class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Button</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- section 5 -->
+
+
+        <!-- section team -->
+        <section class="container text-gray-600 body-font">
+            <div class="container py-24 mx-auto">
+                <div class="text-center py-24">
+                    <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">Ekibimizi Yakından Tanıyın</h1>
+                    <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, aperiam?
+                    </p>
+                    <div class="flex mt-6 justify-center">
+                        <div class="w-16 h-1 rounded-full bg-blue-500 inline-flex"></div>
+                    </div>
+                </div>
+                <div class="flex flex-wrap -m-4">
+                    <div class="p-4 lg:w-1/4 md:w-1/2">
+                        <div class="h-full flex flex-col items-center text-center">
+                            <img alt="team" class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
+                                src="https://dummyimage.com/200x200">
+                            <div class="w-full">
+                                <h2 class="title-font font-medium text-lg text-gray-900">Alper Kamu</h2>
+                                <h3 class="text-gray-500 mb-3">UI Developer</h3>
+                                <p class="mb-4">DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.</p>
+                                <span class="inline-flex">
+                                    <a class="text-gray-500">
+                                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                                        </svg>
+                                    </a>
+                                    <a class="ml-2 text-gray-500">
+                                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                            <path
+                                                d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                                            </path>
+                                        </svg>
+                                    </a>
+                                    <a class="ml-2 text-gray-500">
+                                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                            <path
+                                                d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z">
+                                            </path>
+                                        </svg>
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4 lg:w-1/4 md:w-1/2">
+                        <div class="h-full flex flex-col items-center text-center">
+                            <img alt="team" class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
+                                src="https://dummyimage.com/201x201">
+                            <div class="w-full">
+                                <h2 class="title-font font-medium text-lg text-gray-900">Holden Caulfield</h2>
+                                <h3 class="text-gray-500 mb-3">UI Developer</h3>
+                                <p class="mb-4">DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.</p>
+                                <span class="inline-flex">
+                                    <a class="text-gray-500">
+                                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                                        </svg>
+                                    </a>
+                                    <a class="ml-2 text-gray-500">
+                                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                            <path
+                                                d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                                            </path>
+                                        </svg>
+                                    </a>
+                                    <a class="ml-2 text-gray-500">
+                                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                            <path
+                                                d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z">
+                                            </path>
+                                        </svg>
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4 lg:w-1/4 md:w-1/2">
+                        <div class="h-full flex flex-col items-center text-center">
+                            <img alt="team" class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
+                                src="https://dummyimage.com/202x202">
+                            <div class="w-full">
+                                <h2 class="title-font font-medium text-lg text-gray-900">Atticus Finch</h2>
+                                <h3 class="text-gray-500 mb-3">UI Developer</h3>
+                                <p class="mb-4">DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.</p>
+                                <span class="inline-flex">
+                                    <a class="text-gray-500">
+                                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                                        </svg>
+                                    </a>
+                                    <a class="ml-2 text-gray-500">
+                                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                            <path
+                                                d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                                            </path>
+                                        </svg>
+                                    </a>
+                                    <a class="ml-2 text-gray-500">
+                                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                            <path
+                                                d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z">
+                                            </path>
+                                        </svg>
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4 lg:w-1/4 md:w-1/2">
+                        <div class="h-full flex flex-col items-center text-center">
+                            <img alt="team" class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
+                                src="https://dummyimage.com/203x203">
+                            <div class="w-full">
+                                <h2 class="title-font font-medium text-lg text-gray-900">Henry Letham</h2>
+                                <h3 class="text-gray-500 mb-3">UI Developer</h3>
+                                <p class="mb-4">DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.</p>
+                                <span class="inline-flex">
+                                    <a class="text-gray-500">
+                                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                                        </svg>
+                                    </a>
+                                    <a class="ml-2 text-gray-500">
+                                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                            <path
+                                                d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                                            </path>
+                                        </svg>
+                                    </a>
+                                    <a class="ml-2 text-gray-500">
+                                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                            <path
+                                                d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z">
+                                            </path>
+                                        </svg>
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- section team end -->
+
+
+
+        <!-- section contact -->
+        <section class="container text-gray-600 body-font relative">
+            <div class="absolute inset-0 bg-gray-300">
+                <iframe width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0" title="map" scrolling="no"
+                    src="https://maps.google.com/maps?width=100%&height=600&hl=en&q=%C4%B0zmir+(My%20Business%20Name)&ie=UTF8&t=&z=14&iwloc=B&output=embed"
+                    style="filter:  opacity(0.5);"></iframe>
+            </div>
+            <div class="container px-5 py-24 mx-auto flex">
+                <div
+                    class="lg:w-1/3 md:w-1/2 bg-white rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10 shadow-md">
+                    <h2 class="text-gray-900 text-lg mb-1 font-medium title-font">Feedback</h2>
+                    <p class="leading-relaxed mb-5 text-gray-600">Post-ironic portland shabby chic echo park, banjo fashion axe
+                    </p>
+                    <div class="relative mb-4">
+                        <label for="email" class="leading-7 text-sm text-gray-600">Email</label>
+                        <input type="email" id="email" name="email"
+                            class="w-full bg-white rounded border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                    </div>
+                    <div class="relative mb-4">
+                        <label for="message" class="leading-7 text-sm text-gray-600">Message</label>
+                        <textarea id="message" name="message"
+                            class="w-full bg-white rounded border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+                    </div>
+                    <button
+                        class="text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded text-lg">Button</button>
+                    <p class="text-xs text-gray-500 mt-3">Chicharrones blog helvetica normcore iceland tousled brook viral
+                        artisan.</p>
+                </div>
+            </div>
+        </section>
+        <!-- section contact end -->
+
+
+        <!-- footer -->
+        
+        <footer class="container bg-white dark:bg-gray-900">
+            <div class="mx-auto w-full container p-4 py-6 lg:py-8">
+                <div class="md:flex md:justify-between">
+                    <div class="mb-6 md:mb-0">
+                        <a href="index.html" class="flex items-center">
+                            <img width="200px" src="img/qt=q_95.jpg"  alt=" Logo" />
+                            
+                        </a>
+                    </div>
+                    <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+                        <div>
+                            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Daha Fazla</h2>
+                            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                                <li class="mb-4">
+                                    <a href="https://flowbite.com/" class="hover:underline">Flowbite</a>
+                                </li>
+                                <li>
+                                    <a href="https://tailwindcss.com/" class="hover:underline">Tailwind CSS</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Bizi Takip Edin</h2>
+                            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                                <li class="mb-4">
+                                    <a href="https://github.com/themesberg/flowbite" class="hover:underline ">Github</a>
+                                </li>
+                                <li>
+                                    <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Discord</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
+                            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                                <li class="mb-4">
+                                    <a href="#" class="hover:underline">Gizlilik Politikası</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:underline">Şartlar &amp; Kurallar</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+                <div class="sm:flex sm:items-center sm:justify-between">
+                    <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="https://flowbite.com/"
+                            class="hover:underline">ZetaClinics</a>. Tüm Hakları Saklıdır.
+                    </span>
+                    <div class="flex mt-4 sm:justify-center sm:mt-0">
+                        <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                            <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                viewBox="0 0 8 19">
+                                <path fill-rule="evenodd"
+                                    d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span class="sr-only">Facebook page</span>
+                        </a>
+                        <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
+                            <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                viewBox="0 0 21 16">
+                                <path
+                                    d="M16.942 1.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z" />
+                            </svg>
+                            <span class="sr-only">Discord community</span>
+                        </a>
+                        <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
+                            <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                viewBox="0 0 20 17">
+                                <path fill-rule="evenodd"
+                                    d="M20 1.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.344 8.344 0 0 1-2.605.98A4.13 4.13 0 0 0 13.85 0a4.068 4.068 0 0 0-4.1 4.038 4 4 0 0 0 .105.919A11.705 11.705 0 0 1 1.4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 4.1 9.635a4.19 4.19 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 0 14.184 11.732 11.732 0 0 0 6.291 16 11.502 11.502 0 0 0 17.964 4.5c0-.177 0-.35-.012-.523A8.143 8.143 0 0 0 20 1.892Z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span class="sr-only">Twitter page</span>
+                        </a>
+                        <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
+                            <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span class="sr-only">GitHub account</span>
+                        </a>
+                        <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
+                            <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 0a10 10 0 1 0 10 10A10.009 10.009 0 0 0 10 0Zm6.613 4.614a8.523 8.523 0 0 1 1.93 5.32 20.094 20.094 0 0 0-5.949-.274c-.059-.149-.122-.292-.184-.441a23.879 23.879 0 0 0-.566-1.239 11.41 11.41 0 0 0 4.769-3.366ZM8 1.707a8.821 8.821 0 0 1 2-.238 8.5 8.5 0 0 1 5.664 2.152 9.608 9.608 0 0 1-4.476 3.087A45.758 45.758 0 0 0 8 1.707ZM1.642 8.262a8.57 8.57 0 0 1 4.73-5.981A53.998 53.998 0 0 1 9.54 7.222a32.078 32.078 0 0 1-7.9 1.04h.002Zm2.01 7.46a8.51 8.51 0 0 1-2.2-5.707v-.262a31.64 31.64 0 0 0 8.777-1.219c.243.477.477.964.692 1.449-.114.032-.227.067-.336.1a13.569 13.569 0 0 0-6.942 5.636l.009.003ZM10 18.556a8.508 8.508 0 0 1-5.243-1.8 11.717 11.717 0 0 1 6.7-5.332.509.509 0 0 1 .055-.02 35.65 35.65 0 0 1 1.819 6.476 8.476 8.476 0 0 1-3.331.676Zm4.772-1.462A37.232 37.232 0 0 0 13.113 11a12.513 12.513 0 0 1 5.321.364 8.56 8.56 0 0 1-3.66 5.73h-.002Z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span class="sr-only">Dribbble account</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+        <!-- footer end -->
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
  
-<div class="preloader">
-  <div class="preloader__ring">
-    <div class="preloader__sector">z</div>
-    <div class="preloader__sector">e</div>
-    <div class="preloader__sector">t</div>
-    <div class="preloader__sector">a</div>
-    <div class="preloader__sector">c</div>
-    <div class="preloader__sector">l</div>
-    <div class="preloader__sector">i</div>
-    <div class="preloader__sector">n</div>
-    <div class="preloader__sector">i</div>
-    <div class="preloader__sector">c</div>
-      <div class="preloader__sector">s</div>
-    <div class="preloader__sector">.</div>
-    <div class="preloader__sector">c</div>
-    <div class="preloader__sector">o</div>
-    <div class="preloader__sector">m</div>
-    <div class="preloader__sector"> </div>
-    <div class="preloader__sector">Ç</div>
-    <div class="preloader__sector">o</div>
-    <div class="preloader__sector">k</div>
-    <div class="preloader__sector"> </div>
-    <div class="preloader__sector">y</div>
-    <div class="preloader__sector">a</div>
-    <div class="preloader__sector">k</div>
-    <div class="preloader__sector">ı</div>
-    <div class="preloader__sector">n</div>
-    <div class="preloader__sector">d</div>
-    <div class="preloader__sector">a</div>
-    <div class="preloader__sector"></div>
-    <div class="preloader__sector"></div>
-    <div class="preloader__sector"></div>
-    <div class="preloader__sector"></div>
-  </div>
-  <div class="preloader__ring">
-    <div class="preloader__sector">z</div>
-    <div class="preloader__sector">e</div>
-    <div class="preloader__sector">t</div>
-    <div class="preloader__sector">a</div>
-    <div class="preloader__sector">c</div>
-    <div class="preloader__sector">l</div>
-    <div class="preloader__sector">i</div>
-    <div class="preloader__sector">n</div>
-    <div class="preloader__sector">i</div>
-    <div class="preloader__sector">c</div>
-      <div class="preloader__sector">s</div>
-    <div class="preloader__sector">.</div>
-    <div class="preloader__sector">c</div>
-    <div class="preloader__sector">o</div>
-    <div class="preloader__sector">m</div>
-    <div class="preloader__sector"> </div>
-    <div class="preloader__sector">Ç</div>
-    <div class="preloader__sector">o</div>
-    <div class="preloader__sector">k</div>
-    <div class="preloader__sector"> </div>
-    <div class="preloader__sector">y</div>
-    <div class="preloader__sector">a</div>
-    <div class="preloader__sector">k</div>
-    <div class="preloader__sector">ı</div>
-    <div class="preloader__sector">n</div>
-    <div class="preloader__sector">d</div>
-    <div class="preloader__sector">a</div>
-    <div class="preloader__sector"></div>
-    <div class="preloader__sector"></div>
-    <div class="preloader__sector"></div>
-    <div class="preloader__sector"></div>
-  </div>
-</div>
+    
+    <script src="script.js"></script>
+    <script src="scriptf.js"></script>
 </body>
 </html>
