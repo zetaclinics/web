@@ -59,6 +59,16 @@ position: auto !important;
     max-width: 1200px !important;
     height: 100% !important;
 }
+.politika h1{
+    font-weight: 800;
+    font-size: 24px;
+    padding: 10px 0;
+}
+.politika h2{
+    font-weight: 800;
+    font-size: 18px;
+    padding: 10px 0;
+}
 .banner-text-container{
     max-width: 500px;
 }
