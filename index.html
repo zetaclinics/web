@@ -29,6 +29,27 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'tr', // Orijinal dil Türkçe
+                includedLanguages: 'de,ru,en,ar,tr', // Sadece Almanca, Rusça ve İngilizce
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE, // Basit düğme düzeni
+                autoDisplay: false // Otomatik olarak çeviri kutusunu gösterme
+            }, 'google_translate_element');
+
+            // Türkçe seçeneği ekleyelim
+            var turkishOption = document.createElement('div');
+            turkishOption.innerHTML = '<span onclick="translateToTurkish()">Türkçe</span>';
+            document.querySelector('.goog-te-menu').appendChild(turkishOption);
+        }
+
+        // Türkçe'ye çeviri fonksiyonu
+        function translateToTurkish() {
+            var translateButton = document.querySelector('.goog-te-button');
+            translateButton.dispatchEvent(new MouseEvent('click'));
+        }
+    </script>
 <title>ZetaWorld</title>
 </head>
 <body id="about">
@@ -106,7 +127,7 @@
                                     </div>
                                     <div class="dropdown-m">
                                         <a href="#dis">Diş Hekimliği</a>
-                                        <a href="#iv">Iv Uygulamalar</a>
+                                        
                                         <a href="#medikal">Medikal Estetik</a>
                                         <a href="#kbb">Kulak Burun Boğaz (KBB)</a>
                                     </div>
@@ -127,6 +148,8 @@
                                     </div>
                                 </div>
                             </a>
+                            <div id="google_translate_element"></div>
+
                             
         
         
@@ -224,8 +247,7 @@
                             <dd class="text-md mt-4">Gülüş tasarımı, estetik diş hekimliği uygulamalarını kullanarak kişinin gülüşünü iyileştirmeyi amaçlar. Diş rengi, şekli
                             ve düzeni gibi faktörler incelenerek, kişinin yüzüne en uygun gülüş tasarlanır ve uygulanır.</dd>
                         </div>
-                        <a href="#"><button
-                                class="flex-shrink-0 text-white bg-teal-500 border-0 py-2 px-8 focus:outline-none hover:bg-teal-400 rounded text-lg mt-10 sm:mt-10 sm:mb-10">Tüm Hizmetleri Gör</button></a>
+                        
                     </dl>
                     
 
@@ -240,46 +262,7 @@
             </div>
         </section>
        
-        <section id="iv" class="container text-gray-600 body-font">
-            <div class="container mx-auto flex  py-24 md:flex-row flex-col items-center">
-                <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0 items-center flex justify-center">
-
-                   
-                    <img width="50%" class="object-cover object-center rounded" alt="hero" src="img/nad-iv-bag-v01.png">
-                </div>
-                <div
-                    class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
-                <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">IV Uygulamalar
-                
-                </h1>
-                <dl class="max-w-md text-gray-900 divide-y divide-gray-200 dark:text-white dark:divide-gray-700">
-                    <div class="flex flex-col pb-3">
-                        <dt class="mb-1 mt-4 text-gray-900 md:text-lg dark:text-gray-400"><i
-                                class="fa-solid fa-circle-check text-green-600"></i>IV Tedaviler</dt>
-                        <dd class="text-md mt-4">IV terapiler, vitamin, mineral ve diğer besleyici maddelerin direkt olarak damar yoluyla vücuda verilmesini sağlar,
-                        böylece hızlı bir şekilde etki ederek enerji artışı, bağışıklık güçlenmesi ve genel sağlık iyileştirmesi sağlar...
-                            <a href="iv-uygulamalar.html"><button
-                                class="flex-shrink-0 text-white bg-teal-500 border-0 py-2 px-8 focus:outline-none hover:bg-teal-400 rounded text-lg mt-10 sm:mt-10 sm:mb-10">Daha Fazla Bilgi Al</button></a>
-                    </dd>
-                    </div>
-                    <div class="flex flex-col py-3">
-                        <dt class="mb-1 text-gray-900 md:text-lg dark:text-gray-400"><i
-                                class="fa-solid fa-circle-check text-green-600"></i>NAD+</dt>
-                        <dd class="text-md mt-4"><i class="fa-solid fa-circle-info text-blue-500"></i>Nikotinamid Adenin Dinükleotidi (NAD), vücudu yaşlanmadan ve hastalıktan korumak için vücuttaki bir koenzimdir.</dd>
-                        <dd class="text-md mt-4"><i class="fa-solid fa-circle-info text-blue-500"></i>Yaşlanma etkilerini azaltır ve canlandırır.</dd>
-                        <dd class="text-md mt-4"><i class="fa-solid fa-circle-info text-blue-500"></i>Yaşa bağlı hastalıkların koşullarını iyileştirir.</dd>
-                        <dd class="text-md mt-4"><i class="fa-solid fa-circle-info text-blue-500"></i>Metabolik fonksiyonları düzenlemek için hücrenin enerjisini üretir.</dd>
-                        <dd class="text-md mt-4"><i class="fa-solid fa-circle-info text-blue-500"></i>Vücudun doğal sirkadiyen ritmini sıfırlar.</dd>
-                        <dd class="text-md mt-4"><i class="fa-solid fa-circle-info text-blue-500"></i>Yaşam süresini ve sağlıklı yaşam süresini artırır.</dd>
-                        <dd class="text-md mt-4"><i class="fa-solid fa-circle-info text-blue-500"></i>Kalbi korur ve kardiyak fonksiyonları iyileştirir.</dd>
-                        <dd class="text-md mt-4"><i class="fa-solid fa-circle-info text-blue-500"></i>Beyin hücrelerini nörodejeneratif hastalıklardan korur.</dd>
-                    </div>
-                    
-                </dl>
-                    
-                </div>
-            </div>
-        </section>
+       
         <!-- header hero end -->
         
         <section id="medikal" class="text-gray-600 body-font">
@@ -347,8 +330,7 @@
                         </div>
                     </div>
                 </div>
-                 <a href="iv-uygulamalar.html"><button
-                                class="flex-shrink-0 text-white bg-teal-500 border-0 py-2 px-8 focus:outline-none hover:bg-teal-400 rounded text-lg mt-10 sm:mt-10 sm:mb-10">Daha Fazla Bilgi Al</button></a>
+                
             </div>
         </section>
 
@@ -515,7 +497,8 @@
         <!-- footer end -->
     </body>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
- 
+    <script type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     
     <script src="script.js"></script>
     <script src="scriptf.js"></script>
