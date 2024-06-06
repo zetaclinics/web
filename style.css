@@ -2213,6 +2213,15 @@ background: #24CC63 !important;
 .goog-te-gadget-icon{
     display: none !important;
 }
+.goog-te-menu-value span {
+    display: none;
+    /* Orijinal dil simgesini gizle */
+}
+
+.goog-te-menu-value span:first-child {
+    display: inline;
+    /* İlk simgeyi göster */
+}
 
 .goog-te-gadget-simple span{
     display: flex !important;

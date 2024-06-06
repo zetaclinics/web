@@ -29,6 +29,27 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'tr', // Orijinal dil Türkçe
+                includedLanguages: 'de,ru,en,ar,tr', // Sadece Almanca, Rusça ve İngilizce
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE, // Basit düğme düzeni
+                autoDisplay: false // Otomatik olarak çeviri kutusunu gösterme
+            }, 'google_translate_element');
+
+            // Türkçe seçeneği ekleyelim
+            var turkishOption = document.createElement('div');
+            turkishOption.innerHTML = '<span onclick="translateToTurkish()">Türkçe</span>';
+            document.querySelector('.goog-te-menu').appendChild(turkishOption);
+        }
+
+        // Türkçe'ye çeviri fonksiyonu
+        function translateToTurkish() {
+            var translateButton = document.querySelector('.goog-te-button');
+            translateButton.dispatchEvent(new MouseEvent('click'));
+        }
+    </script>
 <title>Gizlilik Politikası | worldzeta.com</title>
 </head>
 <body id="about">
@@ -126,7 +147,8 @@
                                     </div>
                                 </div>
                             </a>
-                            
+                            <div id="google_translate_element"></div>
+
         
         
         
@@ -473,7 +495,8 @@
     </body>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
  
-    
+    <script type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script src="script.js"></script>
     <script src="scriptf.js"></script>
 </body>
